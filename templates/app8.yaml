@@ -18,7 +18,7 @@ spec:
         app: app8
     spec:
       nodeSelector:
-        agentpool: agentpool
+        agentpool: nodepool1
       containers:
       - image: amarbessalah/snat-app:v8
         name: snat-app
