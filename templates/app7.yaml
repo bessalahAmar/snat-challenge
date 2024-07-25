@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: app7
+  name: app7
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app7
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: app7
+    spec:
+      nodeSelector:
+        agentpool: agentpool
+      containers:
+      - image: amarbessalah/snat-app:v7
+        name: snat-app
+        resources: {}
+status: {}
